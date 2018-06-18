@@ -8,6 +8,9 @@ namespace MVCTutorial.Controllers
 {
 	public class HomeController : Controller
 	{
+		public ActionResult Max() {
+			return View();
+		}
 		public ActionResult Index()
 		{
 			return View();
