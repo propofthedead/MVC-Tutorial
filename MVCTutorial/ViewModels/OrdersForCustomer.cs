@@ -8,7 +8,7 @@ namespace MVCTutorial.ViewModels
 {
 	public class OrdersForCustomer
 	{
-		public Customer customer { get; set; }
+		public Customer Customer { get; set; }
 		public IEnumerable<Order> Orders { get; set; }
 
 		public OrdersForCustomer() { }

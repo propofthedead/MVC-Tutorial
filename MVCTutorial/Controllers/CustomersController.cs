@@ -7,13 +7,21 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVCTutorial.Models;
+using MVCTutorial.ViewModels;
 
 namespace MVCTutorial.Controllers
 {
     public class CustomersController : Controller
     {
         private MVCTutorialContext db = new MVCTutorialContext();
-
+		public ActionResult OrdersForCusomter(int? id) {
+			OrdersForCustomer ordersForCusomter = new OrdersForCustomer();
+			var customer = db.Customers.Find(id);
+			var orders = db.Orders.Where(o => o.CustomerId == id).ToList();
+			ordersForCusomter.Customer = customer;
+			ordersForCusomter.Orders = orders;
+			return View(ordersForCusomter);
+		}
         // GET: Customers
         public ActionResult Index()
         {
