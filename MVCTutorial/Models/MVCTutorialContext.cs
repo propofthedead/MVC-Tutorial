@@ -20,5 +20,7 @@ namespace MVCTutorial.Models
         }
 
 		public System.Data.Entity.DbSet<MVCTutorial.Models.Customer> Customers { get; set; }
+
+		public System.Data.Entity.DbSet<MVCTutorial.Models.Order> Orders { get; set; }
 	}
 }
