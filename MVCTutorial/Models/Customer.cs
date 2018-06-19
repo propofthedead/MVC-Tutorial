@@ -13,6 +13,8 @@ namespace MVCTutorial.Models
 		public string City { get; set; }
 		public string State { get; set; }
 		public decimal TotalSales { get; set; }
+
+
 		public Customer() { }
 
 
